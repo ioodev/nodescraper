@@ -1,19 +1,55 @@
 {
   "name": "@riodevnet/nodescraper",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "NodeScraper is a fast and flexible Node.js web scraping toolkit built using Axios and Cheerio. It provides an intuitive interface for extracting structured HTML and metadata from websites — with clean and consistent outputs.",
   "main": "index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "index.js",
+    "src",
+    "types",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "example:basic": "node examples/01-basic-usage.js",
+    "example:filter": "node examples/02-custom-filter.js",
+    "example:batch": "node examples/03-batch-scraping.js",
+    "example:extras": "node examples/04-json-ld-and-extras.js"
   },
   "keywords": [
     "nodescraper",
     "scraper",
-    "scraping"
+    "scraping",
+    "web-scraping",
+    "html-parser",
+    "cheerio",
+    "axios",
+    "metadata",
+    "open-graph",
+    "seo"
   ],
   "author": "Rio Agung Purnomo",
   "license": "MIT",
   "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riodevnet/nodescraper.git"
+  },
+  "homepage": "https://github.com/riodevnet/nodescraper#readme",
+  "bugs": {
+    "url": "https://github.com/riodevnet/nodescraper/issues"
+  },
   "dependencies": {
     "axios": "^1.10.0",
     "cheerio": "^1.1.0"
