@@ -4,7 +4,7 @@
 
 > Fast. Clean. JavaScript-style scraping. 🕸️⚡
 
-![version](https://img.shields.io/badge/version-1.1.0-blue)
+![version](https://img.shields.io/badge/version-1.1.1-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
 ![node](https://img.shields.io/badge/node-%3E%3D16-brightgreen)
 
@@ -24,10 +24,20 @@
 - [Testing](#-testing)
 - [Examples](#-examples)
 - [Migrating from 1.0.x](#-migrating-from-10x)
+- [Migrating from @riodevnet/nodescraper](#-migrating-from-riodevnetnodescraper)
 - [Contributing](#-contributing)
 - [License](#-license)
 
 ---
+
+## 📦 Package renamed: `@riodevnet/nodescraper` → `@ioodev/nodescraper`
+
+As of **v1.1.1**, this package is published under the `@ioodev` scope. npm
+scopes are tied to the account/organization name and can't be renamed
+in-place, so this is a fresh publish under the new scope rather than an
+update to the old one. If you're on `@riodevnet/nodescraper`, switch to
+`@ioodev/nodescraper` — the API is unchanged. See
+[Migrating from `@riodevnet`](#-migrating-from-riodevnetnodescraper) below.
 
 ## 🆕 What's new in 1.1.0
 
@@ -72,7 +82,7 @@ Nothing here is a breaking change to method names or return *shapes* — see [Mi
 ## 📦 Installation
 
 ```bash
-npm install @riodevnet/nodescraper
+npm install @ioodev/nodescraper
 ```
 
 > Requires Node.js 16 or later.
@@ -82,7 +92,7 @@ npm install @riodevnet/nodescraper
 ## 🛠️ Quick start
 
 ```js
-const NodeScraper = require("@riodevnet/nodescraper");
+const NodeScraper = require("@ioodev/nodescraper");
 
 (async () => {
   const scraper = new NodeScraper("https://example.com");
@@ -287,7 +297,7 @@ Type declarations ship with the package (`types/index.d.ts`, wired up via
 `package.json#types`) — no `@types/` package needed:
 
 ```ts
-import NodeScraper, { ScraperSnapshot, LinkDetails } from "@riodevnet/nodescraper";
+import NodeScraper, { ScraperSnapshot, LinkDetails } from "@ioodev/nodescraper";
 
 const scraper = new NodeScraper("https://example.com");
 await scraper.init();
@@ -329,7 +339,7 @@ nodescraper/
 └── LICENSE
 ```
 
-`index.js` stays a thin re-export so `require("@riodevnet/nodescraper")`
+`index.js` stays a thin re-export so `require("@ioodev/nodescraper")`
 keeps working exactly as before; all real logic lives under `src/`, which
 keeps the public entry point stable while leaving room to split the
 implementation further (e.g. a `src/extractors/` folder) without touching
@@ -390,10 +400,31 @@ Everything else — `loadHTML()`, `meta()`, `lang()`, `robots()`, `favicon()`,
 
 ---
 
+## 📦 Migrating from `@riodevnet/nodescraper`
+
+This package used to be published as `@riodevnet/nodescraper`. The code,
+API, and version history are the same — only the npm scope changed.
+
+```diff
+- npm install @riodevnet/nodescraper
++ npm install @ioodev/nodescraper
+```
+
+```diff
+- const NodeScraper = require("@riodevnet/nodescraper");
++ const NodeScraper = require("@ioodev/nodescraper");
+```
+
+Update any `package.json` dependency entries the same way, then reinstall.
+`@riodevnet/nodescraper` is not getting further updates — please move to
+`@ioodev/nodescraper` for new fixes and features.
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Found a bug or want to request a feature?
-Please open an [issue](https://github.com/riodevnet/nodescraper/issues) or
+Please open an [issue](https://github.com/ioodev/nodescraper/issues) or
 submit a pull request. Run `npm test` before submitting — CI runs the same
 suite across Node 16, 18, 20, and 22.
 

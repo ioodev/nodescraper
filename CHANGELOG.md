@@ -4,6 +4,24 @@ All notable changes to this project are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project follows [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] — 2026-06-19
+
+### Changed
+
+- **Package renamed from `@riodevnet/nodescraper` to `@ioodev/nodescraper`.**
+  npm scopes are tied 1:1 to an account/organization name and cannot be
+  renamed in place, so this is a fresh publish under the `@ioodev` scope
+  rather than an update to the old package. No code or API changes.
+- Updated all `github.com/riodevnet/...` references (README, `package.json`
+  `repository`/`homepage`/`bugs`, default User-Agent string in
+  `src/constants.js`, TypeScript header comment) to `github.com/ioodev/...`.
+
+### Compatibility
+
+No functional changes. If you depend on `@riodevnet/nodescraper`, see the
+README's "Migrating from `@riodevnet/nodescraper`" section — it's a
+drop-in rename, just change the import/install path to `@ioodev/nodescraper`.
+
 ## [1.1.0] — 2026-06-19
 
 A bug-fix-and-feature release. Every existing v1.0 method keeps its name

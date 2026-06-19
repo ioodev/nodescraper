@@ -6,7 +6,7 @@
  * NodeScraper sends a realistic one unless the caller overrides it.
  */
 const DEFAULT_USER_AGENT =
-  'Mozilla/5.0 (compatible; NodeScraper/1.1; +https://github.com/riodevnet/nodescraper)';
+  'Mozilla/5.0 (compatible; NodeScraper/1.1; +https://github.com/ioodev/nodescraper)';
 
 /** Default request timeout, in milliseconds. */
 const DEFAULT_TIMEOUT = 10000;

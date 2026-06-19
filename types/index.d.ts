@@ -1,4 +1,4 @@
-// Type definitions for @riodevnet/nodescraper 1.1.0
+// Type definitions for @ioodev/nodescraper 1.1.0
 
 export interface NodeScraperOptions {
   /** Request timeout in milliseconds. Default: 10000. */
